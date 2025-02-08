@@ -19,7 +19,7 @@ body {
 */
 .roulette-container {
   position: relative;
-  width: calc(100vw / 10); /* Dynamically adjusts based on window width */
+  width: calc(100vw / 8); /* Dynamically adjusts based on window width */
   height: 100vh;
   overflow: hidden;
   perspective: 1000px;
