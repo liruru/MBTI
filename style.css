@@ -1,0 +1,61 @@
+/* Basic body styles with a responsive background */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to top, #113344, #225599, #113344);
+  overflow: hidden;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* 
+   The roulette container width and spacing now scale based on the viewport width.
+   - Width is now a fraction of `100vw` so that the spacing adjusts dynamically.
+   - Margins also scale with `100vw` to maintain proportional spacing between columns.
+*/
+.roulette-container {
+  position: relative;
+  width: calc(100vw / 10); /* Dynamically adjusts based on window width */
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 calc(100vw / 50); /* Horizontal spacing also scales */
+}
+
+/* The roulette column */
+.roulette {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+/* 
+   Letters have absolute dimensions so their vertical arrangement is fixed.
+   Each letter is 50px tall with a 20px bottom margin.
+*/
+.letter {
+  font-size: 40px;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: transform 0.5s linear;
+}
+
+.letter.enlarged {
+  transform: scale(1.8);
+}
+
+.letter-content {
+  display: block;
+}
